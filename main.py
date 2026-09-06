@@ -34,7 +34,7 @@ def impersonate(ack, command, client, respond):
                     response_type="ephemeral"
                 )
     else:
-        if utiid: # dunno why I set up the code like this, but I did.
+        if utiid != "": # dunno why I set up the code like this, but I did.
             client.chat_postMessage( # send the message. 
                 channel=command["channel_id"],
                 text=msg,
