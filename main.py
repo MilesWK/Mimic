@@ -21,7 +21,6 @@ def impersonate(ack, command, client, respond):
     channel_id = command["channel_id"] # get the channel.
 
     result = client.conversations_members(channel=channel_id) # get all the users in the channel
-
     for user_id in result["members"]: # for each id in that list,
         user = client.users_info(user=user_id)["user"] # find the user with that id
         if uti in user["name"]: # if the id matches up with the User we want to impersonate
@@ -29,19 +28,24 @@ def impersonate(ack, command, client, respond):
             utiimg = user["profile"]["image_192"] # get the image of the user
             utiname = user["profile"]["display_name"] # and get the name.
             break # and stop. We don't need to look any further.
-
-    if utiid: # dunno why I set up the code like this, but I did.
-        client.chat_postMessage( # send the message. 
-            channel=command["channel_id"],
-            text=msg,
-            icon_url=utiimg, # set the bot's picture
-            username=utiname # set the bot's username
-        )
-    else:
+    if utiid == "U0A5EEQ1RFY":
         respond( # send an error.
-            text="That user isn't in this channel.",
-            response_type="ephemeral"
-        )
+                    text="You can't impersonate Miles, silly.",
+                    response_type="ephemeral"
+                )
+    else:
+        if utiid: # dunno why I set up the code like this, but I did.
+            client.chat_postMessage( # send the message. 
+                channel=command["channel_id"],
+                text=msg,
+                icon_url=utiimg, # set the bot's picture
+                username=utiname # set the bot's username
+            )
+        else:
+            respond( # send an error.
+                text="That user isn't in this channel.",
+                response_type="ephemeral"
+            )
 
 
 if __name__ == "__main__":
