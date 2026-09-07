@@ -17,4 +17,4 @@ This slack bot uses the Slack API to lookup the ID of the requested user, get th
 3. Create a new slack app using `manifest.json` and install it in the desired workspace. 
 4. in the app directory following `.env-example`, create an `.env` file with your bots Bot token, app token, and signing secret. 
 5. Run `main.py`
-6. Run `/mimic` followed by mentioning the user you want to mimic and the message you want to send.
+6. In slack, run `/mimic` followed by a mention of the user you want to mimic and the message you want to send.
