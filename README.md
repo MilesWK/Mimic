@@ -4,7 +4,7 @@
 > [!CAUTION]
 > This bot is for research purposes only. It also isn't 100% perfect at impersonating users. The author can not be held responsible for usage of this bot
 
-<img width="365" height="108" alt="image" src="https://github.com/user-attachments/assets/57e8283d-c09c-4c92-8d62-76f485c7dcef" />
+<div align=center><img width="365" height="108" alt="image" src="https://github.com/user-attachments/assets/57e8283d-c09c-4c92-8d62-76f485c7dcef" /></div>
 
 
 ## How this works: 
