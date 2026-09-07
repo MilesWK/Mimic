@@ -1,0 +1,57 @@
+{
+    "display_information": {
+        "name": "Mimic",
+        "description": "A bot that is designed to mimic other users.",
+        "background_color": "#000000"
+    },
+    "features": {
+        "bot_user": {
+            "display_name": "Mimic",
+            "always_online": false
+        },
+        "slash_commands": [
+            {
+                "command": "/mimic",
+                "description": "Send a message as someone you aren't",
+                "usage_hint": "[user], [message]",
+                "should_escape": true
+            }
+        ]
+    },
+    "oauth_config": {
+        "scopes": {
+            "user": [
+                "channels:history",
+                "channels:read",
+                "groups:history"
+            ],
+            "bot": [
+                "channels:read",
+                "channels:history",
+                "chat:write",
+                "chat:write.customize",
+                "commands",
+                "users:read",
+                "users:read.email",
+                "groups:read",
+                "mpim:read",
+                "im:read"
+            ]
+        },
+        "pkce_enabled": false
+    },
+    "settings": {
+        "event_subscriptions": {
+            "bot_events": [
+                "message.channels"
+            ]
+        },
+        "interactivity": {
+            "is_enabled": true
+        },
+        "org_deploy_enabled": false,
+        "socket_mode_enabled": true,
+        "token_rotation_enabled": false,
+        "is_mcp_enabled": false
+    }
+}
