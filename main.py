@@ -10,8 +10,8 @@ app = App(
 )
 
 
-@app.command("/impersonate") # that one function.
-def impersonate(ack, command, client, respond):
+@app.command("/mimic") # that one function.
+def mimic(ack, command, client, respond):
     ack()
     uti = command["text"].split(" ")[0].replace("@", "") # UTI: USER TO IMPERSONATE :)
     msg = command["text"].split(' ', 1)[1]               # Everything that isn't the UTI
