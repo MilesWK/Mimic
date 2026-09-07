@@ -1,2 +1,2 @@
-# ImpersonatorBot
-A experimental slack bot for pretending to be other users.
+# Mimic
+A slack bot that allows you to send something as someone else. 
